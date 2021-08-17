@@ -17,7 +17,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
-RUN git config --global user.email "vzin1986@gmail.com" && \ 
+RUN git config --global user.email "zvova8553@gmail.com" && \
     git config --global user.name "vovastudent"
+
+RUN useradd -rm -d /home/www -s /bin/bash -g root -G sudo -u 1000 www
+USER www
 
 EXPOSE 9000

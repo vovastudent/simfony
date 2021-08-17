@@ -2,19 +2,15 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class MyClass
+class MyClass1 extends AbstractController
 {
-
-    public function __construct()
-    {
-        echo "I'm constructor";
-    }
 
     public function index(): Response
     {
-        return new Response("<h1>Hello from controller</h1>");
+        return $this->json(["massege"=>"<h1>Hello my class 1</h1>"]);
 
     }
 
