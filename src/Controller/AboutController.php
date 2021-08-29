@@ -15,20 +15,20 @@ class AboutController extends AbstractController
 
         $users = [
             [
-                'username' => 'John Doe',
-                'subscribed' => false,
-                'created_at' => time()
+                'username'=>'John Doe',
+                'subscribed'=>false,
+                'created_at'=>time()
             ],
             [
-                'username' => 'Mary Ann',
-                'subscribed' => true,
-                'created_at' => time()
+                'username'=>'Mary Ann',
+                'subscribed'=>true,
+                'created_at'=>time()
             ]
 
         ];
 
         return $this->render('about/index.html.twig', [
-            'controller' => 'AboutController', 'hello1' => $hi, 'online' => true,
+            'controller' => 'AboutController', 'hello1'=>$hi, 'online' => true,
             'users' => $users
         ]);
     }

@@ -7,11 +7,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class MyClass1 extends AbstractController
 {
-
-    public function index(): Response
+    /**
+     * @param null
+     */
+    public function hell(): Response
     {
-        return $this->json(["massege"=>"<h1>Hello my class 1</h1>"]);
-
+        return $this->json(["message"=>"<h1>Hello from My Class 1</h1>"]);
     }
-
 }

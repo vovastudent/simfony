@@ -15,6 +15,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 
 RUN apt-get update && apt-get install -y nodejs yarn
 
+
 WORKDIR /var/www
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --quiet
@@ -22,7 +23,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
-RUN git config --global user.email "zvova8553@gmail.com" && \
+RUN git config --global user.email "zvova8553@gmail.com" && \ 
     git config --global user.name "vovastudent"
 
 RUN useradd -rm -d /home/www -s /bin/bash -g root -G sudo -u 1000 www
