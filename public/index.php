@@ -1,17 +1,18 @@
 <?php
 
 use App\Kernel;
-
+//
 //class MyClass
 //{
-//       public $name = "My name";
-//
-//       protected $sex = 'mail';
-//       private $id;
+//    public $name;
+//    protected $sex;
+//    private $id;
 //
 //    public function __construct($name, $sex, $id)
 //    {
+//        $this->sex = $sex;
 //        $this->name = $name;
+//        $this->id = $id;
 //    }
 //
 //    /**
@@ -31,11 +32,12 @@ use App\Kernel;
 //    }
 //
 //
-//
-//};
-//$instance =  new MyClass();
-//$instance->getSex( sex: 'femail');
+//}
+//$instance = new  MyClass("John Doe", "mail", 1);
+//$instance->setSex('femail');
 //var_dump($instance->getSex());
+
+//
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
 return function (array $context) {
